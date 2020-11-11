@@ -1,0 +1,75 @@
+/* Layout */
+
+.welcome__section {
+  background-color: #585858;
+
+  .welcome__section-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .welcome__section-info {
+    font-size: 14px;
+    font-family: "Merriweather", serif;
+    color: #eaeaea;
+  }
+}
+
+.form__section {
+  
+  form {
+    font-family: "Merriweather", serif;
+    color: grey;
+  }
+}
+
+/* Mobile */
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .welcome__section {
+    width: 300px;
+    height: 200px;
+   
+    img {
+      width: 180px;
+      margin: 32px 0px 32px 0px;
+      padding: 0px 0px 177px 26px;
+    }
+
+  }
+
+  .form__section {
+    margin-top: 32px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 5px;
+        font-size: 12px;
+      }
+      
+      input {
+        margin-bottom: 15px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        width: 300px;
+      }
+
+      button {
+        margin-top: 48px;
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+/* Desktop */
