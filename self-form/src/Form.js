@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Form.scss";
-import GiantLogo from "../src/Assets/GiantRobotLTD_Logo.svg";
+import './Form.scss';
+import GiantLogo from '../src/Assets/GiantRobotLTD_Logo.svg';
+import Arrow from '../src/Assets/White_Arrow.svg';
 
 const initialFormState = {
   firstName: "",
@@ -29,12 +30,10 @@ export default function Form() {
       <div className="container">
         <section className="welcome__section">
           <img src={GiantLogo} />
-          <div className="welcome__section-text">
             <p className="welcome__section-title">Welcome</p>
             <p className="welcome__section-info">
               Please tell us a bit about yourself to get started.
             </p>
-          </div>
         </section>
 
         <section className="form__section">
@@ -73,7 +72,7 @@ export default function Form() {
               onChange={handleChange}
               value={form.address2}
             />
-            <button type="submit">Next</button>
+            <button type="submit">Next <img src={Arrow} /></button>
           </form>
         </section>
       </div>
