@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import './Form.scss';
-import GiantLogo from '../src/Assets/GiantRobotLTD_Logo.svg';
-import Arrow from '../src/Assets/White_Arrow.svg';
+import "./Form.scss";
+import GiantLogo from "../src/Assets/GiantRobotLTD_Logo.svg";
+import Arrow from "../src/Assets/White_Arrow.svg";
 
 const initialFormState = {
   firstName: "",
@@ -12,6 +12,7 @@ const initialFormState = {
 
 export default function Form() {
   const [form, setForm] = useState(initialFormState);
+  const [user, setUser] = useState(null);
 
   const handleChange = (event) => {
     setForm({
@@ -22,6 +23,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setUser(form);
     setForm(initialFormState);
   };
 
@@ -29,11 +31,11 @@ export default function Form() {
     <>
       <div className="container">
         <section className="welcome__section">
-          <img src={GiantLogo} />
-            <p className="welcome__section-title">Welcome</p>
-            <p className="welcome__section-info">
-              Please tell us a bit about yourself to get started.
-            </p>
+          <img src={GiantLogo} alt="giant-logo" />
+          <p className="welcome__section-title">Welcome</p>
+          <p className="welcome__section-info">
+            Please tell us a bit about yourself to get started.
+          </p>
         </section>
 
         <section className="form__section">
@@ -72,8 +74,11 @@ export default function Form() {
               onChange={handleChange}
               value={form.address2}
             />
-            <button type="submit">Next <img src={Arrow} /></button>
+            <button type="submit">
+              Next <img src={Arrow} alt="arrow" />
+            </button>
           </form>
+           <pre>{user && JSON.stringify(user, null, 2)}</pre>
         </section>
       </div>
     </>
