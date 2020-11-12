@@ -35,6 +35,8 @@
       border: none;
       font-family: "Roboto", sans-serif;
       font-size: 16px;
+      border-radius: 6px;
+      margin-top: 48px;
     }
   }
 }
@@ -47,7 +49,6 @@
   align-items: flex-end;
 
   .welcome__section {
-    fill: 100%;
     width: 320px;
     height: 200px;
 
@@ -95,13 +96,73 @@
       }
 
       button {
-        margin-top: 48px;
         width: 300px;
         height: 50px;
-        border-radius: 6px;
       }
     }
   }
 }
 
 /* Desktop */
+
+@media (min-width: 799px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    .welcome__section {
+      width: 50em;
+      height: 80em;
+      display: flex;
+      flex-direction: column;
+
+     .welcome__section-title , .welcome__section-info {
+        display: block;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      img {
+        width: 180px;
+      }
+
+      .welcome__section-title {
+        font-size: 32px;
+       
+      }
+
+      .welcome__section-info {
+        width: 400px;
+        margin-top: -20px;
+      }
+    }
+
+    .form__section {
+      padding-bottom: 45em;
+      margin-left: 44px;
+      width: 376px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 5px;
+          font-size: 12px;
+        }
+
+        input {
+          margin-bottom: 30px;
+          height: 45px;
+          width: 300px;
+        }
+
+        button {
+          margin-left: 4px;
+          width: 100px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
