@@ -37,6 +37,10 @@ $radius: 6px;
       border: $no-border;
     }
 
+    input:required {
+     border: 1px solid red;
+    }
+
     button {
       background-color: #ffab44;
       color: $main-text-color;
