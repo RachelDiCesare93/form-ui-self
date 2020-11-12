@@ -1,41 +1,49 @@
 /* Variables */
 
+$font-one: "Roboto", sans-serif;
+$font-two: "Merriweather", serif;
+
+$main-text-color: #ffffff;
+
+$no-border: none;
+$radius: 6px;
+
 /* Layout */
 
 .welcome__section {
   background-color: #585858;
 
   .welcome__section-title {
-    font-family: "Roboto", sans-serif;
+    font-family: $font-one;
     font-weight: 300;
-    color: #ffffff;
+    color: $main-text-color;
   }
 
   .welcome__section-info {
     font-size: 14px;
-    font-family: "Merriweather", serif;
+    font-family: $font-two;
     color: #eaeaea;
   }
 }
 
 .form__section {
   form {
-    font-family: "Merriweather", serif;
+    font-family: $font-two;
     color: grey;
 
     input {
       background-color: whitesmoke;
-      border-radius: 6px;
-      border: none;
+      border-radius: $radius;
+      border: $no-border;
     }
 
     button {
       background-color: #ffab44;
-      color: #ffffff;
-      border: none;
-      font-family: "Roboto", sans-serif;
+      color: $main-text-color;
+      border: $no-border;
+      font-family: $font-one;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: $radius;
       margin-top: 48px;
     }
   }
@@ -116,7 +124,8 @@
       display: flex;
       flex-direction: column;
 
-     .welcome__section-title , .welcome__section-info {
+      .welcome__section-title,
+      .welcome__section-info {
         display: block;
         margin-left: 50px;
         margin-right: 50px;
@@ -128,7 +137,6 @@
 
       .welcome__section-title {
         font-size: 32px;
-       
       }
 
       .welcome__section-info {
