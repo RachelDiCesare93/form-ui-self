@@ -78,7 +78,7 @@ export default function Form() {
               Next <img src={Arrow} alt="arrow" />
             </button>
           </form>
-           <pre>{user && JSON.stringify(user, null, 2)}</pre>
+          <pre>{user && JSON.stringify(user, null, 2)}</pre>
         </section>
       </div>
     </>
